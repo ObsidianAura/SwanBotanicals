@@ -88,7 +88,12 @@ export default function FeaturedRitualsSection() {
                 
                 {/* Duration Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className={`bg-${ritual.color}/80 backdrop-blur-sm text-swan-forest-canopy px-3 py-1 rounded-full text-sm`}>
+                  <span 
+                    className="backdrop-blur-sm text-swan-forest-canopy px-3 py-1 rounded-full text-sm"
+                    style={{
+                      backgroundColor: `color-mix(in srgb, var(--${ritual.color}) 80%, transparent)`
+                    }}
+                  >
                     {ritual.duration}
                   </span>
                 </div>
@@ -124,6 +129,12 @@ export default function FeaturedRitualsSection() {
                       {ritual.title}
                     </h3>
                     <span className={`text-xs bg-${ritual.color}/20 text-swan-forest-canopy px-2 py-1 rounded-full`}>
+                    <span 
+                      className="text-xs text-swan-forest-canopy px-2 py-1 rounded-full"
+                      style={{
+                        backgroundColor: `color-mix(in srgb, var(--${ritual.color}) 20%, transparent)`
+                      }}
+                    >
                       {ritual.difficulty}
                     </span>
                   </div>
@@ -168,7 +179,10 @@ export default function FeaturedRitualsSection() {
                     <div className="space-y-2">
                       {ritual.steps.map((step, stepIndex) => (
                         <div key={stepIndex} className="flex items-center gap-3">
-                          <div className={`w-6 h-6 bg-${ritual.color} text-swan-forest-canopy rounded-full flex items-center justify-center text-sm flex-shrink-0`}>
+                          <div 
+                            className="w-6 h-6 text-swan-forest-canopy rounded-full flex items-center justify-center text-sm flex-shrink-0"
+                            style={{ backgroundColor: `var(--${ritual.color})` }}
+                          >
                             {stepIndex + 1}
                           </div>
                           <span className="text-swan-botanical-charcoal/70">{step}</span>

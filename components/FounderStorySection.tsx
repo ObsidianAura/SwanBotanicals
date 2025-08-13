@@ -39,7 +39,7 @@ export default function FounderStorySection() {
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
                 viewport={{ once: true }}
-                className="absolute -bottom-6 -left-6 w-16 h-16 rounded-full"
+                className="absolute bottom-0 left-0 h-0.5"
                 style={{ backgroundColor: 'var(--swan-sage-green)' }}
               ></motion.div>
             </div>

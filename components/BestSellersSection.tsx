@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Star, Heart, ShoppingCart } from 'lucide-react';
-import productImage1 from '/p1.jpg'; // Adjusted import for productImage1
-import productImage2 from '/p2.jpg'; // Adjusted import for productImage2
-import productImage3 from '/p3.jpg'; // Adjusted import for productImage3
+import productImage1 from '/p1.jpg';
+import productImage2 from '/p2.jpg';
+import productImage3 from '/p3.jpg';
 
 const bestSellers = [
   {
@@ -147,18 +147,23 @@ export default function BestSellersSection() {
                   
                   {/* Badge */}
                   <div className="absolute top-4 left-4">
-                    <span className={`px-3 py-1 rounded-full text-xs text-white ${
-                      product.badge === 'Best Seller' ? 'bg-swan-leaf-green' :
-                      product.badge === 'New' ? 'bg-swan-blush-pink' :
-                      product.badge === 'Editor\'s Pick' ? 'bg-swan-golden-sand' :
-                      'bg-swan-sage-green'
-                    }`}>
+                    <span 
+                      className="px-3 py-1 rounded-full text-xs text-white"
+                      style={{
+                        backgroundColor: 
+                          product.badge === 'Best Seller' ? 'var(--swan-leaf-green)' :
+                          product.badge === 'New' ? 'var(--swan-blush-pink)' :
+                          product.badge === 'Editor\'s Pick' ? 'var(--swan-golden-sand)' :
+                          'var(--swan-sage-green)'
+                      }}
+                    >
                       {product.badge}
                     </span>
                   </div>
 
                   {/* Favorite Button */}
                   <button
+                    animate={{ opacity: 1, scale: 1 }}
                     onClick={() => toggleFavorite(product.id)}
                     className="absolute top-4 right-4 p-2 bg-white/90 backdrop-blur-sm rounded-full hover:bg-white transition-colors"
                   >

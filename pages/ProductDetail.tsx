@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 import productImage1 from '/p1.jpg';
 import productImage2 from '/p2.jpg';
-import productImage3 from '/p3.jpg'; // Adjusted import for productImage3
+import productImage3 from '/p3.jpg';
 
 // Mock product data
 const products = {

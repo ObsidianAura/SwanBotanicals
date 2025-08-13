@@ -54,10 +54,14 @@ export default function IngredientStorySection() {
                 style={{ color: 'var(--swan-sage-green)' }}
               >
                 Botanical Ingredients
-                <div 
+                <motion.div 
+                  initial={{ width: 0 }}
+                  whileInView={{ width: '100%' }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  viewport={{ once: true }}
                   className="absolute bottom-0 left-0 w-full h-0.5 mt-2"
                   style={{ backgroundColor: 'var(--swan-golden-sand)' }}
-                ></div>
+                ></motion.div>
               </span>
             </div>
           </div>

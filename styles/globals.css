@@ -189,6 +189,13 @@
   --color-swan-botanical-charcoal-60: color-mix(in srgb, var(--swan-botanical-charcoal) 60%, transparent);
   --color-swan-botanical-charcoal-70: color-mix(in srgb, var(--swan-botanical-charcoal) 70%, transparent);
   --color-swan-botanical-charcoal-40: color-mix(in srgb, var(--swan-botanical-charcoal) 40%, transparent);
+
+  /* Fix for dynamic color classes */
+  --color-swan-serene-mint-bg: var(--swan-serene-mint);
+  --color-swan-leaf-green-bg: var(--swan-leaf-green);
+  --color-swan-blush-pink-bg: var(--swan-blush-pink);
+  --color-swan-golden-sand-bg: var(--swan-golden-sand);
+  --color-swan-sage-green-bg: var(--swan-sage-green);
 }
 
 @layer base {

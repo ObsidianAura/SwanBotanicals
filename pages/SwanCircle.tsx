@@ -228,15 +228,24 @@ export default function SwanCircle() {
                 }`}
               >
                 <div className="text-center mb-6">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-${tier.color}/20 rounded-full mb-4`}>
-                    <tier.icon size={32} className={`text-${tier.color}`} />
+                  <div 
+                    className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4"
+                    style={{ backgroundColor: `color-mix(in srgb, var(--${tier.color}) 20%, transparent)` }}
+                  >
+                    <tier.icon size={32} style={{ color: `var(--${tier.color})` }} />
                   </div>
                   <h3 className="text-xl text-swan-forest-canopy mb-2">{tier.name}</h3>
                   <p className="text-swan-botanical-charcoal/60">
                     ${tier.minSpend}+ annual spend
                   </p>
                   <div className="mt-2">
-                    <span className={`bg-${tier.color}/20 text-${tier.color} px-3 py-1 rounded-full text-sm`}>
+                    <span 
+                      className="px-3 py-1 rounded-full text-sm"
+                      style={{ 
+                        backgroundColor: `color-mix(in srgb, var(--${tier.color}) 20%, transparent)`,
+                        color: `var(--${tier.color})`
+                      }}
+                    >
                       {tier.pointsMultiplier} Points
                     </span>
                   </div>
@@ -245,7 +254,10 @@ export default function SwanCircle() {
                 <div className="space-y-3">
                   {tier.benefits.map((benefit, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <div className={`w-2 h-2 bg-${tier.color} rounded-full mt-2 flex-shrink-0`}></div>
+                      <div 
+                        className="w-2 h-2 rounded-full mt-2 flex-shrink-0"
+                        style={{ backgroundColor: `var(--${tier.color})` }}
+                      ></div>
                       <span className="text-swan-botanical-charcoal/70 text-sm">{benefit}</span>
                     </div>
                   ))}
